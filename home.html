@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Practice Site</title>
+    <style>
+        .scrolling-container {
+            position: relative;
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 300vw;
+        }
+
+        .scrolling-image {
+            display: inline-block;
+            margin-right: rem;
+            transition: transform 0.10s ease-out;
+            width: 400px;  /* Adjust image size as needed */
+        }
+    </style>
+</head>
+<body class="bg-fixed bg-cover bg-center" 
+    style="background-image: url('https://images.unsplash.com/photo-1677297680558-df5641e505ee?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-sky-800 via-teal-400 to-sky-600 text-white fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <!-- Links -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="home.html" class="px-20 hover:text-blue-900 hover:rotate-6 transition-transform duration-300 ease-in-out">Home</a>
+                    <a href="about.html" class="px-20 hover:text-blue-900 hover:rotate-6 transition-transform duration-300 ease-in-out">About</a>
+                    <a href="home.html" class="px-20 hover:text-blue-900 hover:rotate-6 transition-transform duration-300 ease-in-out">Services</a>
+                    <a href="home.html" class="px-20 hover:text-blue-900 hover:rotate-6 transition-transform duration-300 ease-in-out">Contact</a>
+                    <a href="home.html" class="px-20 hover:text-blue-900 hover:rotate-6 transition-transform duration-300 ease-in-out">More</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a href="home.html" class="block px-4 py-2 text-sm hover:bg-gray-700">Home</a>
+            <a href="home.html" class="block px-4 py-2 text-sm hover:bg-gray-700">About</a>
+            <a href="home.html" class="block px-4 py-2 text-sm hover:bg-gray-700">Services</a>
+            <a href="home.html" class="block px-4 py-2 text-sm hover:bg-gray-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Section with Background Image and Text -->
+    <div class="flex flex-col space-y-2 h-screen items-center justify-center bg-cover bg-fixed">
+        <div class=" flex items-center justify-center w-[90%] max-w-xl h-80 bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-lg border border-sky-100/50 shadow-2xl rounded-lg">
+            <h1 style="font-size: 50px;" class= " text-sky-300 text text-center text-xl font-bold p-20">Welcome</h1>
+        
+        </div>
+    </div>e
+
+    <!-- Horizontal Scrolling Images Section -->
+    <div class=" overflow-hidden max-w-screen max-h-screen bg-gradient-to-br from-teal-500 to-blue-600 bg-sky-500 py-9  items-center justify-center flex flex-col space-y-2  bg-cover bg-fixed">
+        <div class="scrolling-container" id="scroll-container">
+            <!-- Set of images that will scroll horizontally -->
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" class="scrolling-image rounded-md ">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+        </div>
+        <div class="scrolling-container" id="scroll-container">
+            <!-- Set of images that will scroll horizontally -->
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" class="scrolling-image rounded-md ">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+
+        </div>
+        <div>
+            <h1 class="text-teal-200" style="font-size: 100px;">We take pride in our code</h1>
+        </div>
+        
+        <div class="scrolling-container" id="scroll-container">
+            <!-- Set of images that will scroll horizontally -->
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" class="scrolling-image rounded-xl">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" class="scrolling-image rounded-xl">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" class="scrolling-image rounded-xl">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md rota">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+
+        </div>
+        <div class="scrolling-container" id="scroll-container">
+            <!-- Set of images that will scroll horizontally -->
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image  rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+            <img src="https://images.unsplash.com/photo-1623156080307-9ed1f7775be1?q=80&w=1638&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" class="scrolling-image rounded-md">
+
+        </div>
+        
+        
+        
+    </div>
+
+    <!-- Another Section with an Image -->
+    <div class="flex flex-col space-y-2 h-screen items-center justify-center bg-cover bg-fixed">
+        <div style="font-size: 30px;" class=" px-10 text-teal-300 flex items-center justify-center w-[90%] max-w-xl h-60 bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-lg border border-sky-100/50 shadow-2xl rounded-lg">
+        
+            <h1>Sorry didnt know what to put in this so for now this is just space filler text hope you enjoy the site.</h1>
+        </div>
+        
+    </div>
+    <body class="bg-gray-100">
+        <div class=" snap-center  container mx-auto py-11 px-10 text-teal-300 flex items-center justify-center   bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-lg border border-sky-100/50 shadow-2xl rounded-lg">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Example Image -->
+            <div class="group relative  transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+              <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110 ">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                <p class="text-white text-lg font-semibold">Photo 2</p>
+              </div>
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+              </div>
+            </div>
+            <!-- Duplicate and change content for more images -->
+            <div class="group relative hover:rotate-6  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+            <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-6">
+               <a href="https://ziegerfarms.netlify.app/#/">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                </a>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 1</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              <div class="group relative transition-transform duration-300 ease-in-out transform hover:scale-110hover:rotate-6 ">
+                <img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stalk Photo 1" class="w-full h-auto rounded-lg shadow-md object-cover  transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                    <p class="text-white text-lg font-semibold">Photo 2</p>
+                  </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+                </div>
+              </div>
+              
+            
+            
+    <!-- Final Section -->
+    
+    </div>
+
+    <!-- Script for Scrolling Effect -->
+    <script>
+        const scrollContainer = document.getElementById('scroll-container');
+        const images = document.querySelectorAll('.scrolling-image');
+
+        window.addEventListener('scroll', () => {
+            // Get the scroll position
+            const scrollPosition = window.scrollY;
+
+            // Apply a transform to each image based on the scroll position
+            images.forEach((image, index) => {
+                const speed = (index + 1) * 0.030; // Create a different speed for each image
+                image.style.transform = `translateX(${scrollPosition * speed}px)`;
+            });
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        const rotatingBox = document.getElementById('rotating-box');
+
+window.addEventListener('scroll', () => {
+    // Get the current scroll position
+    const scrollPosition = window.scrollY;
+
+    // Calculate the rotation value
+    const rotationDegree = scrollPosition * 0.100; // Adjust the multiplier for sensitivity
+
+    // Apply the rotation using inline styles
+    rotatingBox.style.transform = `rotate(${rotationDegree}deg)`;
+});
+    </script>
+</body>
+</html>
